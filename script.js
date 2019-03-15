@@ -5,3 +5,4 @@ let i;
 for (i=0; i < zbior.length; i++) {
     zbior[i].style.backgroundColor = "yellow"
 }
+
