@@ -1,20 +1,12 @@
-const render = (what, where) => {
+const owoce = ['Kiwi', 'Mango', 'Ananas', 'Grapefruit'];
 
-    what += '<ol>'
+const newArray = owoce.map((element, index, array) =>
+    element + ' - obszar uprawy: tereny tropikalne'
+)
 
-    owoce.forEach( (element, index, array) => { what += '<li>' + element + '</li>' } );
+console.log(newArray)
 
-    what += '</ol>'
 
-    where.innerHTML = what
-    }
-}
-
-let html = ''
-
-let body = document.body
-
-render(html, body)
 
 
 
