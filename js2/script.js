@@ -1,14 +1,32 @@
-function render(where, myArray) {
-    var myFoundElement = myArray.find(function(element, index, array) {
-        return element.indexOf('A') === 0;
-    });
-    
-    where.innerHTML = 'Pierwszą literą jest A: <strong>' + myFoundElement + '</strong>';
-    where.innerHTML += '<br /><br />Zwrócony typ danych: <strong>' + typeof myFoundElement + '</strong>';
+const osoby = [
+    {
+        imie: 'Jan',
+        nazwisko: 'Kowalski',
+        wiek: 18,
+        imieNazwisko: function() { return this.imie + ' ' + this.nazwisko; }
+    },
+    {
+        imie: 'Maria',
+        nazwisko: 'Nowak',
+        wiek: 21,
+        imieNazwisko: function() { return this.imie + ' ' + this.nazwisko; }
+    }
+];
+
+
+let table = '';
+
+table += '<table>';
+
+table += '<th>Imię i Nazwisko</th><th>Wiek</th></tr>';
+
+for (property in osoby) {
+    table += '<tr> </td> + osoby[property].imięNazwisko() + osoby[property].wiek() + '</td></tr>'
 }
 
-var body = document.body;
+table += '<table>';
 
-var owoce = ['Kiwi', 'Mango', 'Ananas', 'Grapefruit'];
+document.body.innerHTML = table;
 
-render(body, owoce);
+
+
