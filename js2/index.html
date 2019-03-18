@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+   
+</head>
+<body>
+
+
+    <script src="./script.js">
+
+function render(myArray) {
+			console.log(myArray.sort());
+			console.log(myArray.reverse());
+		}
+		
+		var kontynenty = ['Europa', 'Azja', 'Antarktyda', 'Afryka', 'Australia i Oceania', 'Ameryka Północna', 'Ameryka Południowa'];
+		render(kontynenty);
+		
+		
+		function render(myArray) {
+			console.log(myArray.sort(function(x, y) { return x - y; }));
+			console.log(myArray.sort(function(x, y) { return y - x; }));
+		}
+		var liczby = [1, 12, 13, 0, 2, 20, 9, 3, 22, 10, -2, 11];
+		
+		render(liczby);
+		/
+        
+    </script>
+</body>
+</html>
