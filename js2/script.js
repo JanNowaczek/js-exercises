@@ -1,15 +1,12 @@
 const owoce = ['Kiwi', 'Mango', 'Ananas', 'Grapefruit'];
 
-const FilteredFruits = []
+const concatenatedFruit = ''
 
 const body = document.body
 
 const render = (what, where) => {
-    what = owoce.filter( (element, index, array) => element.length >= 6 && element.length < 10);
-
+    what = owoce.reduce( (reduced, element, index, array) => reduced += element, 'Sklejone nazwy owocow: ' )
     where.innerHTML = what
-
-    console.log(what)
 }
 
-render(filteredFruit, body)
+render(concatenatedFruit, body)
