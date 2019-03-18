@@ -1,23 +1,15 @@
 const owoce = ['Kiwi', 'Mango', 'Ananas', 'Grapefruit'];
 
-const newArray = []
+const FilteredFruits = []
 
-const body = document.body;
-
+const body = document.body
 
 const render = (what, where) => {
-    what = owoce.map( function (element, index, array) {
-    return element + ' - obszar uprawy: tereny tropikalne'
-    })
+    what = owoce.filter( (element, index, array) => element.length >= 6 && element.length < 10);
 
-    where.innerHTML = what;
+    where.innerHTML = what
+
+    console.log(what)
 }
 
-
-
-render(newArray, body)
-
-
-
-
-
+render(filteredFruit, body)
