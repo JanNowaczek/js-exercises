@@ -1,11 +1,20 @@
-const owoce = ['Kiwi', 'Mango', 'Ananas', 'Grapefruit'];
+const render = (what, where) => {
+
+    what += '<ol>'
+
+    owoce.forEach( (element, index, array) => { what += '<li>' + element + '</li>' } );
+
+    what += '</ol>'
+
+    where.innerHTML = what
+    }
+}
 
 let html = ''
-html += '<ol>'
 
-owoce.forEach( (element, index, array) => { html +='<li>' + element + '</li>'} );
+let body = document.body
 
-html += '</ol>'
+render(html, body)
 
-document.body.innerHTML = html
+
 
