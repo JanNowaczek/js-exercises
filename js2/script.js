@@ -1,12 +1,14 @@
-const owoce = ['Kiwi', 'Mango', 'Ananas', 'Grapefruit'];
-
-const concatenatedFruit = ''
-
-const body = document.body
-
-const render = (what, where) => {
-    what = owoce.reduce( (reduced, element, index, array) => reduced += element, 'Sklejone nazwy owocow: ' )
-    where.innerHTML = what
+function render(where, myArray) {
+    var myFoundElement = myArray.find(function(element, index, array) {
+        return element.indexOf('A') === 0;
+    });
+    
+    where.innerHTML = 'Pierwszą literą jest A: <strong>' + myFoundElement + '</strong>';
+    where.innerHTML += '<br /><br />Zwrócony typ danych: <strong>' + typeof myFoundElement + '</strong>';
 }
 
-render(concatenatedFruit, body)
+var body = document.body;
+
+var owoce = ['Kiwi', 'Mango', 'Ananas', 'Grapefruit'];
+
+render(body, owoce);
